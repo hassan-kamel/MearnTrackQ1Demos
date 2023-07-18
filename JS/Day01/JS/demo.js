@@ -155,4 +155,4 @@
 // var flag = confirm("Are You sure you want to delete this item");
 
 // flag ? document.writeln("Item Deleted") : document.writeln("Operation Canceld");
-alert("Item deleted");
+// alert("Item deleted");
