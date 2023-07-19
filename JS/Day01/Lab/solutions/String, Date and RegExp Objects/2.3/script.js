@@ -88,7 +88,7 @@ while (!escapeFlag && (favColor = prompt('Enter one of red | green | blue'))) {
 }
 
 var bodyContent =
-  '<h1>Your Information</h1><hr><h3>Welcome dear guest <span style="color:' +
+  '<h1>Your Information</h1><hr><h3>Welcome dear guest <span style="`color:' +
   favColor +
   '">' +
   userName +
