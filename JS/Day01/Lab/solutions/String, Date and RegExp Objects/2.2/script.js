@@ -20,23 +20,6 @@ while (regularCounter < reverseCounter && isAPalindrome) {
       ? (isAPalindrome = false)
       : '';
   }
-  // switch (isCaseSensitive) {
-  //   case true:
-  //     var firstChar = CharsOfMessageArray[regularCounter];
-  //     var lastChar = CharsOfMessageArray[reverseCounter];
-  //     break;
-
-  //   case false:
-  //     var firstChar = CharsOfMessageArray[regularCounter].toLowerCase();
-  //     var lastChar = CharsOfMessageArray[reverseCounter].toLowerCase();
-  //     break;
-
-  //   default:
-  //     break;
-  // }
-
-  // if (firstChar !== lastChar) isAPalindrome = false;
-
   reverseCounter--;
   regularCounter++;
 }

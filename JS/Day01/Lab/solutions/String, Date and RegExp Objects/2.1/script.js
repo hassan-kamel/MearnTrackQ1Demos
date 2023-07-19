@@ -1,8 +1,7 @@
 var messageFromUser = prompt('enter a message');
 
 var NumbersOfEs = 0;
-messageFromUser.split('').forEach(function (char) {
-  if (char.toLowerCase() === 'e') NumbersOfEs++;
-});
+for (var i = 0; i < messageFromUser.length; i++)
+  if (messageFromUser[i].toLowerCase() === 'e') NumbersOfEs++;
 
-document.writeln('<h2> NumbersOfEs: ' + NumbersOfEs + '</h2>');
+document.writeln("<h2> Numbers Of E's: " + NumbersOfEs + '</h2>');
