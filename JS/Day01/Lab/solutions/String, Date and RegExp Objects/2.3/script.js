@@ -55,7 +55,8 @@ while (
  * @regex   email should be a valid email
  */
 escapeFlag = false;
-var emailRegex = /^\w@\w\.\w$/g;
+// old regex --> /^\w@\w\.\w$/g
+var emailRegex = /^\w+@\w+\.\w+/;
 while (!escapeFlag && (email = prompt('Enter your email .....'))) {
   console.log('email: ', email);
   console.log('email.search(emailRegex): ', email.search(emailRegex));
