@@ -10,22 +10,17 @@ while (
   else alert('Please Enter A Number #️⃣');
 }
 
-const enteredElements = new Array(...elements);
-const sortedDesc = new Array(...elements.sort((a, b) => b - a));
-const sortedAsc = new Array(...elements.sort((a, b) => a - b));
-console.log('enteredElements: ', enteredElements);
-console.log('sortedDesc: ', sortedDesc);
-console.log('sortedAsc: ', sortedAsc);
-
 var bodyContent =
   '<h1>Sorting</h1><hr><h3 style="color: brown">You\'ve entered values of  <span style="color: black;">' +
-  enteredElements +
+  elements +
   '</span></h3><h3 style="color: brown">Your values after sorted descending <span style="color: black;">' +
-  sortedDesc +
+  elements.sort(function (a, b) {
+    return b - a;
+  }) +
   '</span></h3><h3 style="color: brown">Your values after sorted ascending <span style="color: black;">' +
-  sortedAsc +
+  elements.sort(function (a, b) {
+    return a - b;
+  }) +
   '</span></h3>';
 
 document.writeln(bodyContent);
-
-// Still in progress
