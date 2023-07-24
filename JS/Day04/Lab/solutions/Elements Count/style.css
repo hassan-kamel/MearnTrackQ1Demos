@@ -1,0 +1,76 @@
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+}
+
+body {
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.hidden {
+  display: none;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+input {
+  font-size: 20px;
+  padding: 1px 15px;
+  width: 200px;
+}
+button {
+  background-color: cadetblue;
+  color: azure;
+  border: none;
+  outline: none;
+  padding: 2px 15px;
+  cursor: pointer;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
+.sign {
+  text-align: center;
+  color: transparent;
+}
+
+.color {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+.sign:nth-child(1) .bg {
+  background-color: red;
+}
+.sign:nth-of-type(2) .bg {
+  background-color: yellow;
+}
+.sign:nth-of-type(3) .bg {
+  background-color: green;
+}
+.sign:nth-child(1) .sign-text {
+  color: red;
+}
+.sign:nth-of-type(2) .sign-text {
+  color: yellow;
+}
+.sign:nth-of-type(3) .sign-text {
+  color: green;
+}
