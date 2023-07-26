@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form action="" onsubmit="submitForm(event)">
+        <div id="success-message"> Successfully Submitted</div>
+        <div class="input-row">
+            <label for="myName">Name</label>
+            <input type="text" id="myName" name="name" onkeyup="watchChange(event)">
+            <div class="error-message" id="error-name">Name must be at least 3 characters</div>
+        </div>
+        <div class="input-row">
+            <label for="MyEmail">Email</label>
+            <input type="text" id="MyEmail" name="email" onkeyup="watchChange(event)">
+            <div class="error-message" id="error-email">Email must be valid email address</div>
+        </div>
+        <div class="input-row" style="margin-bottom: 10px">
+            <label for="myPassword">Password</label>
+            <input type="password" id="myPassword" name="password" onkeyup="watchChange(event)">
+            <div class="error-message" id="error-password">Password must be uppercase and lowercase letters, numbers,
+                and special characters</div>
+        </div>
+        <div class="input-row">
+            <label for="myGender">Gender</label>
+            <div class="choices" id="myGender">
+                <label class="radio-container">Male
+                    <input type="radio" value="male" name="gender" checked="checked" onkeyup="watchChange(event)">
+                    <span class="radio-checkmark"></span>
+                </label>
+                <label class="radio-container">Female
+                    <input type="radio" value="female" name="gender" checked="checked" onkeyup="watchChange(event)">
+                    <span class="radio-checkmark"></span>
+                </label>
+
+
+            </div>
+        </div>
+        <div class="input-row">
+            <label for="mySport">Sports</label>
+            <div class="sports" id="mySport">
+                <label class="checkbox-container">Tennis
+                    <input type="checkbox" value="tennis" name="sport" onkeyup="watchChange(event)">
+                    <span class="checkbox-checkmark"></span>
+                </label>
+                <label class="checkbox-container">Running
+                    <input type="checkbox" value="running" checked name="sport" onkeyup="watchChange(event)">
+                    <span class="checkbox-checkmark"></span>
+                </label>
+                <label class="checkbox-container">Football
+                    <input type="checkbox" value="football" name="sport" onkeyup="watchChange(event)">
+                    <span class="checkbox-checkmark"></span>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="input-row">
+            <label for="country">Country</label>
+            <Select id="country" name="country" onkeyup="watchChange(event)">
+                <option value="egypt">Egypt</option>
+                <option value="jordan">Jordan</option>
+                <option value="syria">Syria</option>
+            </Select>
+        </div>
+        <div class="cta">
+            <Button type="submit">Submit</Button>
+            <Button type="reset">Reset</Button>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

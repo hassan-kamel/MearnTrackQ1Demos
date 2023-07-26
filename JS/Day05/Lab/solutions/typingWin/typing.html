@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+        var paragraph = "Hello Mearn Stack Welcome From ITI  ";
+        var body = document.getElementsByTagName('body')[0];
+        var index = 0;
+        var interval = setInterval(() => {
+            body.append(paragraph[index])
+            index++;
+            index === paragraph.length && clearInterval(interval)
+            index === paragraph.length && window.close()
+        }, 100);
+
+    </script>
+</body>
+
+</html>
