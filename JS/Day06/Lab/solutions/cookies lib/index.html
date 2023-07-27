@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 20px;
+        }
+
+        .error-message {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username">
+
+    <label for="age">Age</label>
+    <input type="number" id="age" name="age">
+
+    <br>
+    <br>
+    <br>
+
+    <label for="male">
+        <img src="1.jpg" alt="">
+    </label>
+    <input type="radio" name="gender" value="male" id="male">
+    <label for="female">
+        <img src="2.jpg" alt="">
+    </label>
+    <input type="radio" name="gender" value="female" id="female">
+
+
+    <br>
+    <br>
+    <br>
+
+    <label for="color">Set Your Fav Color</label>
+    <select id="color">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="brown">Brown</option>
+    </select>
+
+    <br>
+    <br>
+    <br>
+
+
+    <button onclick="register()">Register</button>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="error-message"> Failed </div>
+
+    <script src="cookies.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

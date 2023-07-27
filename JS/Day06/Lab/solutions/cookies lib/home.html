@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="" alt="">
+    Welcome <span></span> you're visited this site <span></span> times
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <button onclick="logout()">Log Out</button>
+
+    <script src="cookies.js"></script>
+    <script>
+        if (!getCookie('visited')) {
+            console.log("v");
+            window.open('./index.html', '_self');
+        } else {
+
+            var img = document.getElementsByTagName('img')[0];
+            var span = document.getElementsByTagName('span');
+            var times = Number(getCookie('visited'));
+            var newTimes = ++times;
+            setCookie('visited', newTimes, 5);
+            if (getCookie('gender') === 'true') img.setAttribute('src', '1.jpg')
+            else img.setAttribute('src', '2.jpg')
+
+            span[1].innerHTML = Number(getCookie('visited'));
+            span[1].style.color = getCookie('color')
+            span[0].style.color = getCookie('color')
+            span[0].innerHTML = getCookie('username');
+
+            function logout() {
+                deleteCookie('username');
+                deleteCookie('age');
+                deleteCookie('color');
+                deleteCookie('gender');
+                deleteCookie('visited');
+                window.open('./index.html', '_self');
+            }
+        }
+
+    </script>
+</body>
+
+</html>
