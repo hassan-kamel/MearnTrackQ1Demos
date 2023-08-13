@@ -166,40 +166,40 @@ setTimeout(() => {
  */
 
 function getProductsList() {
-	var myPromise = new Promise(function (x, y) {
-		var products;
-		setTimeout(() => {
-			products = [100, 200, 300, 400];
-			products ? x(products) : y("Error on getting products List");
-		}, 2000);
-	});
+  var myPromise = new Promise(function (x, y) {
+    var products;
+    setTimeout(() => {
+      products = [100, 200, 300, 400];
+      products ? x(products) : y('Error on getting products List');
+    }, 2000);
+  });
 
-	return myPromise;
+  return myPromise;
 }
 
 function getProduct(productId) {
-	return new Promise(function (resolve, reject) {
-		setTimeout(() => {
-			var product = {
-				id: productId,
-				productName: "Book",
-				price: 300,
-			};
-			product ? resolve(product) : reject("Error on getting product");
-		});
-	});
+  return new Promise(function (resolve, reject) {
+    setTimeout(() => {
+      var product = {
+        id: productId,
+        productName: 'Book',
+        price: 300,
+      };
+      product ? resolve(product) : reject('Error on getting product');
+    });
+  });
 }
 
 function getPrice(product) {
-	return new Promise(function (resolve, reject) {
-		setTimeout(() => {
-			let price = product.price;
-			price ? resolve(price) : reject("Error on getting price");
-		}, 500);
-	});
+  return new Promise(function (resolve, reject) {
+    setTimeout(() => {
+      let price = product.price;
+      price ? resolve(price) : reject('Error on getting price');
+    }, 500);
+  });
 }
 
-console.log("-----------");
+console.log('-----------');
 // getProductsList()
 // 	.then((myProducts) => {
 // 		return getProduct(myProducts[0]);
@@ -226,7 +226,7 @@ console.log("-----------");
 
 // execute();
 
-var result = fetch("https://jsonplaceholder.typicode.com/users");
+var result = fetch('https://jsonplaceholder.typicode.com/users');
 // result
 // 	.then((response) => {
 // 		return response.json();
